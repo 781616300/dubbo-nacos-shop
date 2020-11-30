@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: 59.110.213.162:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: dev
+      config:
+        namespace: dev
