@@ -22,33 +22,27 @@ spring:
 #    - classpath*:mapper/*/*.xml
 #    - classpath*:mapper/*.xml
 
-#management:
-#  endpoint:
-#    health:
-#      show-details: always
-#  health:
-#    elasticsearch:
-#      enabled: false
-#  endpoints:
-#    web:
-#      exposure:
-#        include: info, health, metrics
-
-
+management:
+  endpoint:
+    health:
+      show-details: always
+  health:
+    elasticsearch:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics
 
 dubbo:
   application:
     id: shop-service
   protocol:
     name: dubbo
+    port: -1
+    threads: 2000
   scan:
     base-packages: com.xialuo.shop
-  cloud:
-    subscribed-services: ""
-  registry:
-    address: spring-cloud://59.110.213.162:8848
-
-
 
 #pagehelper:
 #  helper-dialect: mysql

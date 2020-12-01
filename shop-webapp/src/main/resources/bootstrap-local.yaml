@@ -21,3 +21,7 @@ dubbo:
   registry:
     address: spring-cloud://59.110.213.162:8848
     simplified: true
+  provider:
+    scope: local
+  scan:
+    base-packages: com.xialuo.shop.service

@@ -8,3 +8,9 @@ spring:
         namespace: dev
       config:
         namespace: dev
+
+dubbo:
+  cloud:
+    subscribed-services: ""
+  registry:
+    address: spring-cloud://59.110.213.162:8848

@@ -19,4 +19,21 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
+    <!-- 这个配置可以使local生效-->
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <spring.active>local</spring.active>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <artifactId>shop-service</artifactId>
+                    <groupId>com.xialuo.shop</groupId>
+                    <version>0.0.1-SNAPSHOT</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
 </project>
