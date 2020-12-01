@@ -8,6 +8,46 @@ spring:
         namespace: dev
       config:
         namespace: dev
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  shardingsphere:
+    datasource:
+      names: master,slave
+      master:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/coupon?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowMultiQueries=true
+        username: root
+        password: 123456
+        druid:
+          initial-size: 5 #连接池初始化大小
+          min-idle: 10 #最小空闲连接数
+          max-active: 20 #最大连接数
+          web-stat-filter:
+            exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+          stat-view-servlet: #访问监控网页的登录用户名和密码
+            login-username: druid
+            login-password: druid
+      slave:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/coupon?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowMultiQueries=true
+        username: root
+        password: 123456
+        druid:
+          initial-size: 5 #连接池初始化大小
+          min-idle: 10 #最小空闲连接数
+          max-active: 20 #最大连接数
+          web-stat-filter:
+            exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+          stat-view-servlet: #访问监控网页的登录用户名和密码
+            login-username: druid
+            login-password: druid
+    masterslave:
+      load-balance-algorithm-type: round_robin
+      name: ms
+      master-data-source-name: master
+      slave-data-source-names: slave
 
 dubbo:
   application:

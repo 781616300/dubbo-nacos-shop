@@ -1,5 +1,6 @@
 package com.xialuo.shop;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -7,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(value = {
     "com.xialuo.shop",
     })
+@MapperScan(value = {"com.xialuo.shop.dao"})
 @SpringCloudApplication
 //@EnableFeignClients
 //@EnableConfigurationProperties({MaterialProperties.class})
