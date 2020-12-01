@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.session.RowBounds;
 
 @Mapper
 public interface CouponMapper {
@@ -51,4 +52,10 @@ public interface CouponMapper {
    * @mbggenerated
    */
   int updateByPrimaryKey(Coupon record);
+
+  List<Coupon> selectListWithRowBounds(RowBounds rowBounds);
+
+  List<Coupon> selectList();
+
+  List<Coupon> selectListCustomCount(int pageNum, int pageSize);
 }

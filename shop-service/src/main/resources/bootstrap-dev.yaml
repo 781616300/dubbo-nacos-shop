@@ -8,6 +8,14 @@ spring:
         namespace: dev
       config:
         namespace: dev
+        enabled: true
+        refresh-enabled: true
+        group: DEFAULT_GROUP
+        file-extension: yaml
+        extension-configs:
+          - dataId: shop-service.yaml
+            group: DEFAULT_GROUP
+            refresh: true
 
 dubbo:
   cloud:

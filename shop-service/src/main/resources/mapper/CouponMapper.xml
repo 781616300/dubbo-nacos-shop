@@ -165,4 +165,22 @@
         test_coupon
         from coupon
     </select>
+
+    <select id="selectListWithRowBounds" resultMap="BaseResultMap">
+        select
+        *
+        from coupon
+    </select>
+    <select id="selectList" parameterType="map" resultMap="BaseResultMap">
+        select
+        *
+        from coupon
+        where 1=1
+    </select>
+
+    <select id="selectListCustomCount" resultMap="BaseResultMap">
+        select
+        *
+        from coupon
+    </select>
 </mapper>

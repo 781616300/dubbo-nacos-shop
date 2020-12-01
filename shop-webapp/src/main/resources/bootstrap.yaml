@@ -7,7 +7,7 @@ server:
 
 spring:
   profiles:
-    active: local #默认为开发环境
+    active: dev #默认为开发环境
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -35,8 +35,3 @@ management:
     web:
       exposure:
         include: info, health, metrics
-
-mybatis:
-  mapper-locations:
-    - classpath*:mapper/*/*.xml
-    - classpath*:mapper/*.xml
