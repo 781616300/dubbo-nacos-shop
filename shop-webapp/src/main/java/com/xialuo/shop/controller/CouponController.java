@@ -1,5 +1,6 @@
 package com.xialuo.shop.controller;
 
+import com.xialuo.shop.domain.Coupon;
 import com.xialuo.shop.dto.CommonResult;
 import com.xialuo.shop.service.CouponService;
 import java.util.Map;
@@ -22,6 +23,12 @@ public class CouponController extends BaseController {
   @GetMapping(value = "/get/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
   public CommonResult getCounponById(@PathVariable(value = "id") Long id) {
     Map<String, Object> counpon = couponService.getCounponById(id);
+    return CommonResult.success(counpon);
+  }
+
+  @GetMapping(value = "/getFromMyBatis/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+  public CommonResult getFromMyBatisPlus(@PathVariable(value = "id") Long id) {
+    Coupon counpon = couponService.selectById(id);
     return CommonResult.success(counpon);
   }
 

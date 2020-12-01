@@ -15,12 +15,16 @@
 //import java.util.Scanner;
 //import org.apache.commons.lang3.StringUtils;
 //
-//public class CodeGenerator {
+///**
+// * @author lvzhyong
+// * @date 2020/6/29 20:10
+// */
+//public class CodeGeneratorByWelearn {
 //
 //    /**
 //     * 项目绝对路径（需要修改为自己的路径）
 //     */
-//    private static final String PROJECT_PATH = System.getProperty("user.dir") + File.separator + "shop-service" + File.separator +"target" + File.separator  ;
+//    private static final String PROJECT_PATH = System.getProperty("user.dir") + File.separator + "shop-service" + File.separator  ;
 //
 //    private static String  moduleName = "";
 //
