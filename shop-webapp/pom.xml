@@ -14,7 +14,12 @@
 
     <dependencies>
         <dependency>
-            <artifactId>shop-service</artifactId>
+            <artifactId>shop-common</artifactId>
+            <groupId>com.xialuo.shop</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <artifactId>shop-api</artifactId>
             <groupId>com.xialuo.shop</groupId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -36,4 +41,12 @@
             </dependencies>
         </profile>
     </profiles>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

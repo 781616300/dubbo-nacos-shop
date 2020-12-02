@@ -89,24 +89,6 @@
 			<version>2.9.2</version>
 		</dependency>
 
-<!--		&lt;!&ndash; mybatis-plus &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>com.baomidou</groupId>-->
-<!--			<artifactId>mybatis-plus-generator</artifactId>-->
-<!--			<version>3.4.1</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.freemarker</groupId>-->
-<!--			<artifactId>freemarker</artifactId>-->
-<!--			<version>2.3.30</version>-->
-<!--		</dependency>-->
-
-		<!--MyBatis分页插件starter-->
-		<dependency>
-			<groupId>com.github.pagehelper</groupId>
-			<artifactId>pagehelper-spring-boot-starter</artifactId>
-			<version>1.2.13</version>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -141,14 +123,5 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

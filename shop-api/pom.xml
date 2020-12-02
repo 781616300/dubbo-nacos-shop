@@ -11,5 +11,13 @@
 
     <artifactId>shop-api</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.1.11</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
